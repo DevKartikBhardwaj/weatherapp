@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { BiSearch } from "react-icons/bi";
 import toast, { Toaster } from "react-hot-toast";
 const Header = () => {
-  const [location, setLocation] = useState("New Delhi");
+  const [location, setLocation] = useState("Roorkee");
 
   const dispatch = useDispatch();
   useEffect(() => {
