@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-
 import { BiSearch } from "react-icons/bi";
 import toast, { Toaster } from "react-hot-toast";
-
+import env from "react-dotenv";
 const Header = () => {
   const [location, setLocation] = useState("New Delhi");
 
@@ -16,7 +15,7 @@ const Header = () => {
       try {
         const { data } = await axios
           .get(
-            `https://api.weatherapi.com/v1/forecast.json?key=14c58b6a7e064ad09f871903232602&q=${location}`
+            `https://api.weatherapi.com/v1/forecast.json?key=${env.API_KEY}&q=${location}`
           )
           .catch((err) => {
             toast.error("Cannot find that!");
