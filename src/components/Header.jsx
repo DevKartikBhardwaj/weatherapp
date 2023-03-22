@@ -15,7 +15,7 @@ const Header = () => {
       try {
         const { data } = await axios
           .get(
-            `https://api.weatherapi.com/v1/forecast.json?key=${env.API_KEY}&q=${location}`
+            `https://api.weatherapi.com/v1/forecast.json?key=14c58b6a7e064ad09f871903232602&q=${location}`
           )
           .catch((err) => {
             toast.error("Cannot find that!");
