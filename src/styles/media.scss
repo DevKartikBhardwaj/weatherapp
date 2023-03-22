@@ -1,0 +1,53 @@
+@media only screen and (max-width: 1150px) {
+  main#hourly-page {
+    flex-direction: column;
+    align-items: center;
+    .leftHourlyComponent {
+      width: 100%;
+      padding: 10px 20px;
+    }
+    .rightHourlyComponent {
+      width: 100%;
+      > h4 {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .current {
+    padding: 40px;
+  }
+}
+
+@media only screen and (max-width: 630px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0px;
+    .rightNav {
+      .searchBar {
+        input {
+          width: 15em;
+        }
+      }
+    }
+  }
+
+  .current {
+    padding: 40px 20px;
+    .middle {
+      flex-direction: column;
+      align-items: center;
+      padding: 2em 0;
+      .middleRight {
+        padding-top: 3em;
+        flex-direction: row;
+        .middleRightInner {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

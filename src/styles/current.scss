@@ -1,0 +1,67 @@
+@import "colors";
+.current {
+  height: 89vh;
+  background: rgb(0, 92, 151);
+
+  color: white;
+  padding: 40px 200px;
+
+  .topContainer {
+    text-align: center;
+
+    > h5 {
+      font: 400 1.1rem $primaryText;
+    }
+    #heading {
+      padding-bottom: 2em;
+    }
+  }
+
+  .middle {
+    display: flex;
+    justify-content: space-around;
+    padding: 5em 0;
+    .middleLeft {
+      display: flex;
+      align-items: center;
+      width: 25%;
+      justify-content: space-around;
+
+      > img {
+        height: 8em;
+      }
+      #middleLeftInner {
+        > h1 {
+          font-size: 5rem;
+        }
+        > p {
+          font-size: 1.1rem;
+        }
+      }
+    }
+    .middleRight {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      .middleRightInner {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        > svg {
+          font-size: 40px;
+        }
+        p {
+          font-size: 1.3rem;
+          padding: 0 16px;
+        }
+      }
+    }
+  }
+  .bottomContainer {
+    display: flex;
+    justify-content: space-evenly;
+    .bottomContainerComponent {
+      text-align: center;
+    }
+  }
+}

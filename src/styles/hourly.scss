@@ -1,0 +1,43 @@
+main#hourly-page {
+  min-height: 89vh;
+  background: rgb(0, 92, 151);
+  display: flex;
+  justify-content: space-evenly;
+  .leftHourlyComponent {
+    display: flex;
+    align-items: center;
+    canvas {
+      height: 550px;
+      width: 700px;
+      background-color: "#005c97";
+    }
+  }
+
+  .rightHourlyComponent {
+    > h4 {
+      margin-bottom: 10px;
+      background-color: black;
+    }
+    text-align: center;
+    width: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .hourlyForecastContainer {
+      height: 500px;
+      overflow: auto;
+      .hourlyForecastCard {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+        border-bottom: 1px solid white;
+        > p {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

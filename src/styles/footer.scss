@@ -1,0 +1,13 @@
+@import "colors";
+#footer {
+  color: white;
+
+  background: rgb(0, 92, 151);
+  padding: 5px 0;
+  font: 400 0.8em $primaryText;
+  text-align: center;
+  > a {
+    color: red;
+    font-weight: bold;
+  }
+}

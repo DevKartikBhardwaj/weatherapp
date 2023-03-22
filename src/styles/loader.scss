@@ -1,0 +1,19 @@
+.loader {
+  height: 89vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(0, 92, 151);
+  > div {
+    height: 100px;
+    width: 100px;
+    border-bottom: 4px solid white;
+    border-radius: 50%;
+    animation: rotation 1s infinite ease-in;
+    @keyframes rotation {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+}
