@@ -6,7 +6,6 @@ import Loader from "./Loader";
 
 const Hourly = () => {
   const { forecast } = useSelector((state) => state.main);
-  console.log(forecast);
   return Object.keys(forecast) == 0 ? (
     <Loader />
   ) : (
@@ -17,9 +16,10 @@ const Hourly = () => {
       <div className="rightHourlyComponent">
         <h4>Hourly Forecast</h4>
         <div className="hourlyForecastContainer">
-          {forecast.forecast.forecastday[0].hour.map((element) => {
+          {forecast.forecast.forecastday[0].hour.map((element, index) => {
             return (
               <HourlyForecastCard
+                key={index}
                 icon={element.condition.icon}
                 condition={element.condition.text}
                 temp={element.temp_c}
