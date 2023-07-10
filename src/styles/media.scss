@@ -23,13 +23,13 @@
 
 @media only screen and (max-width: 630px) {
   nav {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 10px 0px;
     .rightNav {
       .searchBar {
         input {
-          width: 15em;
+          width: 12em;
         }
       }
     }

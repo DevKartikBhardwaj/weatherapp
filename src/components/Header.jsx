@@ -4,6 +4,8 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { BiSearch } from "react-icons/bi";
 import toast, { Toaster } from "react-hot-toast";
+import logo from "../images/logo.png";
+
 const Header = () => {
   const [location, setLocation] = useState("Roorkee");
   const locationRef = useRef(null);
@@ -39,10 +41,15 @@ const Header = () => {
     <nav>
       <Toaster />
       <div className="leftNav">
-        <Link to="/">Current</Link>
-        <Link to="/hourly">Hourly</Link>
+        <span>
+          <img src={logo} alt="logo" height={"25px"} />
+          मौसम
+        </span>
       </div>
       <div className="rightNav">
+        <Link to="/">Current</Link>
+        <Link to="/hourly">Hourly</Link>
+
         <div className="searchBar">
           <input type="text" id="location" ref={locationRef} />
           <button onClick={handleSearch}>
