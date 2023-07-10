@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useDispatch } from "react-redux";
@@ -6,7 +6,7 @@ import { BiSearch } from "react-icons/bi";
 import toast, { Toaster } from "react-hot-toast";
 const Header = () => {
   const [location, setLocation] = useState("Roorkee");
-
+  const locationRef = useRef(null);
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchData = async () => {
@@ -30,9 +30,9 @@ const Header = () => {
   }, [dispatch, location]);
 
   const handleSearch = () => {
-    const value = document.getElementById("location").value;
+    const value = locationRef.current.value;
     setLocation(value);
-    document.getElementById("location").value = "";
+    locationRef.current.value = "";
   };
 
   return (
@@ -44,7 +44,7 @@ const Header = () => {
       </div>
       <div className="rightNav">
         <div className="searchBar">
-          <input type="text" id="location" />
+          <input type="text" id="location" ref={locationRef} />
           <button onClick={handleSearch}>
             <BiSearch />
           </button>
